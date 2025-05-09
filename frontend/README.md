@@ -50,7 +50,7 @@ src/
 1. Repository klonen:
 
    ```bash
-   git clone https://github.com/dein-benutzername/ai-todo-list.git
+   git clone https://github.com/ArnoldTauscher/AI-To-Do-List
    cd ai-todo-list
    ```
 

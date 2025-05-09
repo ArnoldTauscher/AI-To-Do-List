@@ -43,30 +43,32 @@ export const AddTodo = () => {
     }
 
     return (
-        <div className="todo-container">
+        <div className="todo-form-container">
             <h3>Todo hinzufügen</h3>
             <div className="todo-form">
+            <div className="todo-form-inputs">
                 {/* Eingabefeld für den Titel */}
-                <input
-                    type="text"
-                    placeholder="Titel"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    required
-                />
-                {/* Dropdown für den Status */}
-                <select value={status} onChange={(e) => setStatus(e.target.value as 'offen' | 'in Bearbeitung' | 'erledigt')}>
-                    <option value="offen">Offen</option>
-                    <option value="in Bearbeitung">In Bearbeitung</option>
-                    <option value="erledigt">Erledigt</option>
-                </select>
-                {/* Dropdown für die Priorität */}
-                <select value={priority} onChange={(e) => setPriority(e.target.value)}>
-                    <option value="">Priorität wählen...</option>
-                    <option value="hoch">Hoch</option>
-                    <option value="mittel">Mittel</option>
-                    <option value="niedrig">Niedrig</option>
-                </select>
+                    <input
+                        type="text"
+                        placeholder="Titel"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        required
+                    />
+                    {/* Dropdown für den Status */}
+                    <select value={status} onChange={(e) => setStatus(e.target.value as 'offen' | 'in Bearbeitung' | 'erledigt')}>
+                        <option value="offen">Offen</option>
+                        <option value="in Bearbeitung">In Bearbeitung</option>
+                        <option value="erledigt">Erledigt</option>
+                    </select>
+                    {/* Dropdown für die Priorität */}
+                    <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+                        <option value="">Priorität wählen...</option>
+                        <option value="hoch">Hoch</option>
+                        <option value="mittel">Mittel</option>
+                        <option value="niedrig">Niedrig</option>
+                    </select>
+                </div>
                 {/* Button zum Hinzufügen des Todos */}
                 <button onClick={addTodo}>Todo hinzufügen</button>
             </div>

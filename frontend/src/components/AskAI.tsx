@@ -31,7 +31,7 @@ function AskAI() {
     }
 
     return (
-        <div className="container">
+        <div className="ask-ai-container">
             <h3>Stelle eine Frage an die KI zu den Todos!</h3>
             <p>(Englische Fragen bearbeitet die KI effizienter.)</p>
             {/* Eingabefeld für die Frage */}

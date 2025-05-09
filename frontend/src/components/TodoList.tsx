@@ -1,5 +1,5 @@
 import { Todo } from "../types";
-import { TodoCard } from "./Todo";
+import { TodoCard } from "./TodoCard";
 
 // Definiert die Props, die die TodoList-Komponente erwartet
 type Props = {
@@ -13,7 +13,7 @@ type Props = {
 // Komponente, die eine Liste von TodoCards rendert
 export const TodoList = ({ todos, onDeleteTodo, onAddNote, onDeleteNote, onUpdateStatus }: Props) => {
     return (
-        <div className="todo-card-container">
+        <div className="todo-cards-container">
             {/* Für jedes Todo wird eine TodoCard-Komponente gerendert */}
             {todos && todos.map((todo, index) => <TodoCard
                 key={index}

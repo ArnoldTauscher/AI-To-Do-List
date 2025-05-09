@@ -1,4 +1,4 @@
-.container button {
+.ask-ai-container button {
     width: 100%;
     padding: 10px;
     border: none;
@@ -10,26 +10,26 @@
     font-family: Arial, sans-serif;
 }
 
-.container {
+.ask-ai-container {
     width: 100%;
     margin-bottom: 20px;
 }
 
-.container h3 {
+.ask-ai-container h3 {
     margin-bottom: 0px;
     text-align: center;
     font-family: Arial, sans-serif;
     color: #333;
 }
 
-.container p {
+.ask-ai-container p {
     margin: 0 0 15px 0;
     text-align: center;
     font-family: Arial, sans-serif;
     color: #4e4e4e;
 }
 
-.container input[type='text'] {
+.ask-ai-container input[type='text'] {
     width: calc(100% - 22px);
     padding: 10px;
     border: 1px solid #ccc;
@@ -39,7 +39,7 @@
     font-size: 16px;
 }
 
-.container .ask-button {
+.ask-ai-container .ask-button {
     width: 100%;
     padding: 10px;
     border: none;
@@ -51,7 +51,7 @@
     font-family: Arial, sans-serif;
 }
 
-.container .ask-button:hover {
+.ask-ai-container .ask-button:hover {
     background-color: #0056b3;
 }
 

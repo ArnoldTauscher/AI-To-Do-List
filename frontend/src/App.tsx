@@ -4,7 +4,7 @@ import { AddTodo } from './components/AddTodoForm';
 import { TodoList } from './components/TodoList';
 import { Todo } from './types';
 import AskAI from './components/AskAI';
-
+import LoadingIndicator from "./components/LoadingIndicator";
 
 function App() {
   const collection = useCollection<Todo>('todos');
@@ -56,17 +56,21 @@ function App() {
   };
 
   return (
-    <div className="card">
+    <div className="app-container">
       <AskAI />
       <AddTodo />
-      {/* Übergibt die Todos-Daten an die TodoList-Komponente */}
-      <TodoList
-        todos={todos.data.map((todo) => todo.data)}
-        onDeleteTodo={onDeleteTodo}
-        onAddNote={onAddNote}
-        onDeleteNote={onDeleteNote}
-        onUpdateStatus={onUpdateStatus}
-      />
+      {/* Zeige einen Ladeindikator, solange die Daten geladen werden */}
+      {todos.loading ? (
+        <LoadingIndicator />
+      ) : (
+        <TodoList
+          todos={todos.data.map((todo) => todo.data)}
+          onDeleteTodo={onDeleteTodo}
+          onAddNote={onAddNote}
+          onDeleteNote={onDeleteNote}
+          onUpdateStatus={onUpdateStatus}
+        />
+      )}
     </div>
   );
 }

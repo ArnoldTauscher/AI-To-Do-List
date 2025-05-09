@@ -1,16 +1,17 @@
-.todo-container {
+.todo-form-container {
     width: 100%;
     margin-bottom: 20px;
 }
   
-.todo-container h3 {
+.todo-form-container h3 {
     margin-bottom: 10px;
     text-align: center;
     font-family: Arial, sans-serif;
     color: #333;
 }
   
-.todo-form {
+.todo-form,
+.todo-form-inputs {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -18,9 +19,9 @@
     align-items: center;
 }
   
-.todo-form select,
-.todo-form input {
-    width: calc(33% - 50px);
+.todo-form-inputs select,
+.todo-form-inputs input {
+    width: calc(33% - 20px);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -28,11 +29,12 @@
     margin: 5px;
 }
 
-.todo-form input::placeholder {
+.todo-form-inputs input::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
   
 .todo-form button {
+    width: 200px;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -41,9 +43,33 @@
     font-size: 16px;
     cursor: pointer;
     font-family: Arial, sans-serif;
-    margin: 5px;
+    margin: 5px 5px 5px 20px;
 }
   
 .todo-form button:hover {
     background-color: #0056b3;
+}
+
+@media (max-width: 1024px) {
+    .todo-form {
+        flex-direction: column;
+    }
+
+    .todo-form button {
+        width: 99%;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 640px) {
+    .todo-form-inputs {
+        flex-direction: column;
+
+    }
+
+    .todo-form-inputs select,
+    .todo-form-inputs input {
+        width: 100%;
+        box-sizing: border-box; /* Stellt sicher, dass Padding und Border in der Breite enthalten sind */
+    }
 }
